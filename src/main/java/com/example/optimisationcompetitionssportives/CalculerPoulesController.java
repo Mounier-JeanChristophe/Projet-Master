@@ -57,6 +57,9 @@ public class CalculerPoulesController implements Initializable {
     private Button retour;
 
     @FXML
+    private Button addTeam;
+
+    @FXML
     private TextField sportInput;
 
     @FXML
@@ -134,6 +137,11 @@ public class CalculerPoulesController implements Initializable {
     @FXML
     void onRetourButtonClick(ActionEvent event) throws IOException {
         Context.getApp().back();
+    }
+
+    @FXML
+    void onCreerEquipeButtonClick(ActionEvent event) throws IOException {
+        Context.getApp().showFxml("creer-equipe-view.fxml");
     }
 
     boolean getSelectedEquipesListe() throws IOException {

@@ -38,4 +38,8 @@ public class AccueilController {
         Context.getApp().showFxml("calculer-poules-view.fxml");
     }
 
+    @FXML
+    void onInterfaceIAClickButton(ActionEvent event) throws IOException {
+        Context.getApp().showFxml("interfaceIA.fxml");
+    }
 }
