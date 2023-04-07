@@ -11,7 +11,7 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.optimisationcompetitionssportives.CalculerPoulesController">
    <children>
-      <Text layoutX="137.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="CALCULER LES POULES" textAlignment="CENTER" wrappingWidth="926.9160461425781">
+      <Text layoutX="137.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Calculer les poules" textAlignment="CENTER" wrappingWidth="926.9160461425781">
          <font>
             <Font name="Copperplate" size="79.0" />
          </font>

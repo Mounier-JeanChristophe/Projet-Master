@@ -39,6 +39,7 @@ public class OptimisationCompetitionsSportivesApplication extends Application {
             FXMLLoader fxmlLoader = new FXMLLoader(OptimisationCompetitionsSportivesApplication.class.getResource("accueil-view.fxml"));
 
             Scene scene = new Scene(fxmlLoader.load(), 1200, 800);
+            scene.getStylesheets().add("style.css");
             stage.setTitle("Optimisation de Compétitions Sportives");
             stage.setScene(scene);
 
@@ -100,6 +101,7 @@ public class OptimisationCompetitionsSportivesApplication extends Application {
             FXMLLoader fxmlLoader = new FXMLLoader(OptimisationCompetitionsSportivesApplication.class.getResource(fxml));
 
             Scene scene = new Scene(fxmlLoader.load(), 1200, 800);
+            scene.getStylesheets().add("style.css");
 
             stage.setScene(scene);
             stage.show();
