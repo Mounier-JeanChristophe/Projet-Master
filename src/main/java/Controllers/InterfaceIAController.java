@@ -1,4 +1,4 @@
-package com.example.optimisationcompetitionssportives;
+package Controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

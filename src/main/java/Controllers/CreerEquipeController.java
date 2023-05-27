@@ -1,4 +1,4 @@
-package com.example.optimisationcompetitionssportives;
+package Controllers;
 
 import DB.Equipe.Equipe;
 import DB.Equipe.EquipeDAO;
@@ -9,12 +9,9 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.input.KeyCode;
-import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.util.ArrayList;
 
 public class CreerEquipeController {
 

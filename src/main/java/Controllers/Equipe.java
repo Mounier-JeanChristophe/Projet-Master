@@ -1,4 +1,4 @@
-package com.example.optimisationcompetitionssportives;
+package Controllers;
 
 /**
  * Classe equipe, contient les informations liees a une equipe

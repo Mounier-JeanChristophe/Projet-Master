@@ -1,4 +1,4 @@
-package com.example.optimisationcompetitionssportives;
+package Controllers;
 
 import ilog.concert.*;
 import ilog.cplex.IloCplex;

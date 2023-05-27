@@ -1,4 +1,4 @@
-package com.example.optimisationcompetitionssportives;
+package Controllers;
 
 import API.CitiesDistanceAPI;
 import Algorithme.Clustering;
@@ -31,7 +31,6 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.ResourceBundle;
-import java.util.Scanner;
 
 import static java.lang.Math.round;
 
