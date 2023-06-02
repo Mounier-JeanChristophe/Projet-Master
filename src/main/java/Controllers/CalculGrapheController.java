@@ -18,6 +18,20 @@ public class CalculGrapheController {
     @FXML
     private Button validerButton;
 
+    @FXML
+    private Button construireGrapheButton;
+
+    @FXML
+    private Button afficherModeleButton;
+
+    @FXML
+    private Button sauvegarderProjetButton;
+
+    @FXML
+    private Button supprimerProjetButton;
+
+    Main mainInstance = new Main();
+
     public void initialize() {
     }
 
@@ -27,7 +41,6 @@ public class CalculGrapheController {
 
         // Vérifier si le nom de fichier est valide et effectuer les opérations nécessaires
         if (nomFichier != null && !nomFichier.isEmpty()) {
-            Main mainInstance = new Main();
 
             try {
                 mainInstance.main(new String[0]);
@@ -38,4 +51,23 @@ public class CalculGrapheController {
         }
     }
 
+    @FXML
+    void onConstruireGrapheButtonClick(ActionEvent event) {
+        mainInstance.construireGraphe();
+    }
+
+    @FXML
+    void onAfficherModeleButtonClick(ActionEvent event) {
+        mainInstance.afficherModele();
+    }
+
+    @FXML
+    void onSauvegarderProjetButtonClick(ActionEvent event) {
+        mainInstance.sauvegarderProjet();
+    }
+
+    @FXML
+    void onSupprimerProjetButtonClick(ActionEvent event) {
+        mainInstance.supprimerProjet();
+    }
 }

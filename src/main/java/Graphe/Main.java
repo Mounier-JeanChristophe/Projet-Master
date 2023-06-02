@@ -332,6 +332,72 @@ public class Main {
         return false;
     }
 
+    /*private boolean chargerFichier() throws IOException {
+        System.out.print("Nom du fichier à charger:");
+        String input = reader.readLine();
+        graphePoids.loadFile(input);
+        return false;
+    }*/
+
+    /*private boolean chargerMatch() throws IOException {
+        System.out.println("Format match: <Equipe I> <Equipe J> <Score I> <Score J>");
+        String[] scores = reader.readLine().split(" ");
+        if(scores.length == 4) {
+            int i = Integer.parseInt(scores[0]);
+            int j = Integer.parseInt(scores[1]);
+            int di = Integer.parseInt(scores[2]);
+            int dj = Integer.parseInt(scores[3]);
+            graphePoids.loadMatch(i, j, di, dj);
+        } else {
+            System.out.println("Format incorrect !");
+        }
+        return false;
+    }*/
+
+    public boolean construireGraphe() {
+        makeGraph();
+        System.out.println("Graphe généré");
+        return false;
+    }
+
+    public boolean afficherModele() {
+        graphePoids.print();
+        return false;
+    }
+
+    public boolean sauvegarderProjet() {
+        FileManager.saveData(graphePoids, graph, projectName);
+        System.out.println("Sauvegarde réussie");
+        return false;
+    }
+
+    public boolean supprimerProjet() {
+        FileManager.deleteProject(projectName);
+        return false;
+    }
+
+    /*private boolean effectuerPrediction() throws IOException {
+        System.out.println("Format: <équipe I> <équipe J>");
+        String[] equipes = reader.readLine().split(" ");
+        if(equipes.length == 2) {
+            int i = Integer.parseInt(equipes[0]);
+            int j = Integer.parseInt(equipes[1]);
+            graphePoids.getPrediction(i, j);
+        } else {
+            System.out.println("Format incorrect !");
+        }
+        return false;
+    }*/
+
+    private boolean effectuerTest() {
+        Algo algo = new Algo(graphePoids);
+        algo.algoEstimation();
+        //algo.getClassement();
+        graphePoids.getAllPrediction();
+        return false;
+    }
+
+
     public static void printOptions(){
         String[] options = {
                 "0- Charger un fichier",
