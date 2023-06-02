@@ -1,5 +1,7 @@
 package Ordonnancement;
 
+import API.DistanceGoogleAPI;
+
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -7,20 +9,20 @@ import java.io.BufferedWriter;
 
 public class DataGenerator {
 
-    private int nbEquipe;
-    private int borne_inf;
-    private int borne_sup;
-    private int borne_inf_cons;
-    private int borne_sup_cons;
-    private ArrayList<String> adresse;
+    private final int nbEquipe;
+    private final int borne_inf;
+    private final int borne_sup;
+    private final int borne_inf_cons;
+    private final int borne_sup_cons;
+    private final ArrayList<String> adresses;
 
-    public DataGenerator(int nbEquipe, int borne_inf, int borne_sup, int borne_inf_cons, int borne_sup_cons, ArrayList<String> adresse) {
+    public DataGenerator(int nbEquipe, int borne_inf, int borne_sup, int borne_inf_cons, int borne_sup_cons, ArrayList<String> adresses) {
         this.nbEquipe = nbEquipe;
         this.borne_inf = borne_inf;
         this.borne_sup = borne_sup;
         this.borne_inf_cons = borne_inf_cons;
         this.borne_sup_cons = borne_sup_cons;
-        this.adresse = adresse;
+        this.adresses = adresses;
     }
 
     public void generateIntputFile(){
@@ -46,5 +48,25 @@ public class DataGenerator {
 
     private void calculateDistances() {
 
+        String filename = "src/main/java/Ordonnancement/Modeles/param_test.txt";
+        try {
+            BufferedWriter writer = new BufferedWriter(new FileWriter(filename, true));
+            writer.write("d = [ \n");
+
+            DistanceGoogleAPI api = new DistanceGoogleAPI(this.adresses);
+            int[][] matriceDistances = api.getDistances();
+
+            for(int i = 0; i < nbEquipe; i++){
+                for(int j = 0; j < nbEquipe; j++){
+                    String distance = String.valueOf(matriceDistances[i][j]);
+                    writer.append(distance).append(" ");
+                }
+                writer.append("\n");
+            }
+            writer.append("\n]");
+            writer.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

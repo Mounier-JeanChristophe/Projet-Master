@@ -9,9 +9,21 @@ import java.util.regex.*;
 public class Main {
 
     public static void main(String[] args){
-        DataGenerator dataGenerator = new DataGenerator(10,4,5,0,9,new ArrayList<>());
-        //dataGenerator.generateIntputFile();
-        getSchedulingResult();
+        ArrayList<String> adresses = new ArrayList<>();
+        adresses.add("Paris");
+        adresses.add("Madrid");
+        adresses.add("Londres");
+        adresses.add("Berlin");
+        adresses.add("Rome");
+        adresses.add("Marseille");
+        adresses.add("Berne");
+        adresses.add("Turin");
+        adresses.add("Nantes");
+        adresses.add("Bruxelles");
+
+        DataGenerator dataGenerator = new DataGenerator(10,4,5,0,9, adresses);
+        dataGenerator.generateIntputFile();
+        //getSchedulingResult();
 
     }
 

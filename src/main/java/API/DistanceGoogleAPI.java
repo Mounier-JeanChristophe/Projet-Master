@@ -34,7 +34,7 @@ public class DistanceGoogleAPI {
                 "&key="+ apiKey;
     }
 
-    public int[][] getDistance() throws IOException {
+    public int[][] getDistances() throws IOException {
 
         // creation d'un client okhttp et preparation de la requete
         OkHttpClient client = new OkHttpClient().newBuilder().build();
@@ -48,7 +48,7 @@ public class DistanceGoogleAPI {
         return extractDistancesFromJsonResponse(responseData);
     }
 
-    public int[][] extractDistancesFromJsonResponse(String responseData){
+    private int[][] extractDistancesFromJsonResponse(String responseData){
 
         System.out.println(responseData);
         // recuperation du corps de la requete dans un objet json
@@ -81,7 +81,7 @@ public class DistanceGoogleAPI {
         cyties.add("Londres");
 
         DistanceGoogleAPI api = new DistanceGoogleAPI(cyties);
-        int[][] results = api.getDistance();
+        int[][] results = api.getDistances();
 
         int size = 3;
         for(int i = 0; i < size; i++){
