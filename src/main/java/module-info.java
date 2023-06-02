@@ -5,6 +5,8 @@ module com.example.optimisationcompetitionssportives {
     requires javafx.graphics;
     requires cplex;
     requires java.sql;
+    requires okhttp3;
+    requires com.google.gson;
 
 
     opens com.example.optimisationcompetitionssportives to javafx.fxml;
