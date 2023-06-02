@@ -23,12 +23,12 @@ public class Main {
     public static void main(String[] args) throws IOException, ClassNotFoundException, GraphParseException {
         System.setProperty("org.graphstream.ui", "swing");
         System.setProperty("org.graphstream.ui.renderer", "org.graphstream.ui.j2dviewer.J2DGraphRenderer");
-        init();
+        /*init();
 
         boolean end;
         do{
             end = readInput();
-        }while(!end);
+        }while(!end);*/
     }
 
 
@@ -36,14 +36,14 @@ public class Main {
      * recupere le graphe stocke si le projet existe
      * sinon cree un projet a partir d'un ficher d'entree
      */
-    public static void init() throws IOException, ClassNotFoundException, GraphParseException {
+    public static void init(String projectName) throws IOException, ClassNotFoundException, GraphParseException {
         initAlphabet();
         //initAlphabetLigue1();
         graph = new MultiGraph("graph");
 
-        System.out.print("Charger un projet: ");
+        /*System.out.print("Charger un projet: ");
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        projectName = reader.readLine();
+        projectName = reader.readLine();*/
 
         //si le projet existe on charge les donnees
         if(FileManager.isProjectExist(projectName)){
@@ -58,16 +58,16 @@ public class Main {
         }
         //sinon on demande un fichier d'entree
         else{
-            String input;
+            //String input;
             System.out.println("Projet inexistant !");
-            do {
+            /*do {
                 System.out.print("Entrez le nom d'un fichier valide: ");
                 input = reader.readLine();
             }while(!FileManager.isDataFileExist(input));
 
             graphePoids = new GraphePoids(input, 5);
             graphePoids.loadFile(input);
-            makeGraph();
+            makeGraph();*/
         }
         graph.display();
         updateWeight();

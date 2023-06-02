@@ -17,7 +17,7 @@
             <Font name="Monaco" size="26.0" />
          </font>
       </Button>
-      <Button fx:id="retour1" layoutX="324.0" layoutY="428.0" mnemonicParsing="false" onAction="#onRetourButtonClick" style="-fx-background-radius: 0.5em;" text="Calcul graphe" textFill="WHITE">
+      <Button fx:id="graph" layoutX="324.0" layoutY="428.0" mnemonicParsing="false" onAction="#onGraphButtonClick" style="-fx-background-radius: 0.5em;" text="Calcul graphe" textFill="WHITE">
          <font>
             <Font name="Monaco" size="26.0" />
          </font>

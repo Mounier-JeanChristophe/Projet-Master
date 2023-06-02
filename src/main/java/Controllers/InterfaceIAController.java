@@ -1,9 +1,11 @@
 package Controllers;
 
+import Graphe.Main;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
+import org.graphstream.stream.GraphParseException;
 
 import java.io.IOException;
 
@@ -27,4 +29,8 @@ public class InterfaceIAController {
         Context.getApp().back();
     }
 
+    @FXML
+    void onGraphButtonClick(ActionEvent event) throws IOException {
+        Context.getApp().showFxml("calcul-graphe.fxml");
+    }
 }
