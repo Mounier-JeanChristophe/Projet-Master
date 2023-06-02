@@ -1,0 +1,41 @@
+DGS004
+null 0 0
+cg  "ui.quality":true
+cg  "ui.antialias":true
+cg  "ui.stylesheet":"graph {fill-color: black;}"
+an "A"
+cn "A"  "ui.label":"A"
+cn "A"  "ui.style":"shape:circle;fill-color: grey; text-size: 15px; text-style: bold; size: 25px; text-alignment: center; text-color: red;"
+an "B"
+cn "B"  "ui.label":"B"
+cn "B"  "ui.style":"shape:circle;fill-color: grey; text-size: 15px; text-style: bold; size: 25px; text-alignment: center; text-color: red;"
+an "C"
+cn "C"  "ui.label":"C"
+cn "C"  "ui.style":"shape:circle;fill-color: grey; text-size: 15px; text-style: bold; size: 25px; text-alignment: center; text-color: red;"
+an "D"
+cn "D"  "ui.label":"D"
+cn "D"  "ui.style":"shape:circle;fill-color: grey; text-size: 15px; text-style: bold; size: 25px; text-alignment: center; text-color: red;"
+ae "AB" "A" > "B"
+ce "AB"  "ui.label":0.317420
+ce "AB"  "weight":0.317420
+ce "AB"  "ui.style":"text-color: blue; fill-color: blue; text-size: 15px; arrow-shape: arrow; arrow-size: 20px, 4px; text-background-mode: plain; text-background-color: black; text-alignment: along; text-padding: 2px, 2px; text-offset: -4px;"
+ae "CA" "C" > "A"
+ce "CA"  "ui.label":0.477121
+ce "CA"  "weight":0.477121
+ce "CA"  "ui.style":"text-color: blue; fill-color: blue; text-size: 15px; arrow-shape: arrow; arrow-size: 20px, 4px; text-background-mode: plain; text-background-color: black; text-alignment: along; text-padding: 2px, 2px; text-offset: -4px;"
+ae "BC" "B" > "C"
+ce "BC"  "ui.label":0.301030
+ce "BC"  "weight":0.301030
+ce "BC"  "ui.style":"text-color: blue; fill-color: blue; text-size: 15px; arrow-shape: arrow; arrow-size: 20px, 4px; text-background-mode: plain; text-background-color: black; text-alignment: along; text-padding: 2px, 2px; text-offset: -4px;"
+ae "AD" "A" > "D"
+ce "AD"  "ui.label":0.176091
+ce "AD"  "weight":0.176091
+ce "AD"  "ui.style":"text-color: blue; fill-color: blue; text-size: 15px; arrow-shape: arrow; arrow-size: 20px, 4px; text-background-mode: plain; text-background-color: black; text-alignment: along; text-padding: 2px, 2px; text-offset: -4px;"
+ae "DB" "D" > "B"
+ce "DB"  "ui.label":0.477121
+ce "DB"  "weight":0.477121
+ce "DB"  "ui.style":"text-color: blue; fill-color: blue; text-size: 15px; arrow-shape: arrow; arrow-size: 20px, 4px; text-background-mode: plain; text-background-color: black; text-alignment: along; text-padding: 2px, 2px; text-offset: -4px;"
+ae "CD" "C" > "D"
+ce "CD"  "ui.label":0.301030
+ce "CD"  "weight":0.301030
+ce "CD"  "ui.style":"text-color: blue; fill-color: blue; text-size: 15px; arrow-shape: arrow; arrow-size: 20px, 4px; text-background-mode: plain; text-background-color: black; text-alignment: along; text-padding: 2px, 2px; text-offset: -4px;"
