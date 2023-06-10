@@ -1,11 +1,10 @@
 package Controllers;
 
-import Graphe.Main;
+import Algorithme.Graphe.Main;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
-import javafx.stage.Stage;
 import org.graphstream.stream.GraphParseException;
 
 import java.io.IOException;

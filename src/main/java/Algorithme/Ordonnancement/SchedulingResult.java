@@ -1,4 +1,4 @@
-package Ordonnancement;
+package Algorithme.Ordonnancement;
 
 import java.util.ArrayList;
 import java.util.HashMap;

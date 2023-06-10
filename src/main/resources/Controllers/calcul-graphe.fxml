@@ -13,7 +13,7 @@
          <font>
             <Font size="18.0" />
          </font></Button>
-        <Button fx:id="construireGrapheButton" layoutX="494.0" layoutY="400.0" mnemonicParsing="false" onAction="#onConstruireGrapheButtonClick" text="Construire Graphe">
+        <Button fx:id="construireGrapheButton" layoutX="494.0" layoutY="400.0" mnemonicParsing="false" onAction="#onConstruireGrapheButtonClick" text="Construire Algorithme.Graphe">
          <font>
             <Font size="18.0" />
          </font></Button>
@@ -29,7 +29,7 @@
          <font>
             <Font size="18.0" />
          </font></Button>
-        <Text layoutX="141.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Calculer Graphe" textAlignment="CENTER" wrappingWidth="926.9160461425781">
+        <Text layoutX="141.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Calculer Algorithme.Graphe" textAlignment="CENTER" wrappingWidth="926.9160461425781">
             <font>
                 <Font name="System Bold" size="83.0" />
             </font>

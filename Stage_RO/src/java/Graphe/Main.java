@@ -1,4 +1,4 @@
-package Graphe;
+package Algorithme.Graphe;
 
 import com.google.common.collect.BiMap;
 import com.google.common.collect.HashBiMap;
@@ -283,7 +283,7 @@ public class Main {
             //construire le graphe
             case("2"):
                 makeGraph();
-                System.out.println("Graphe généré");
+                System.out.println("Algorithme.Graphe généré");
                 return false;
 
             //afficher le modele (graphePoids)

@@ -1,4 +1,4 @@
-package Graphe;
+package Algorithme.Graphe;
 
 
 import org.graphstream.graph.Graph;

@@ -1,4 +1,4 @@
-package Algorithme;
+package Algorithme.Clustering;
 
 public class Equipe {
     private Double x; //Coordonnées x de l'équipe

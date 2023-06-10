@@ -1,4 +1,4 @@
-package Graphe;
+package Algorithme.Graphe;
 
 import org.decimal4j.util.DoubleRounder;
 

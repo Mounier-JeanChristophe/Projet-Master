@@ -58,7 +58,8 @@ public class DistanceGoogleAPI {
 
         // initialisation matrice distance
         int nbAdresses = rows.size();
-        int[][] matriceDistances = new int[nbAdresses][nbAdresses];
+        int nbAdressesTotal = (nbAdresses%2 == 0) ? nbAdresses : nbAdresses+1;
+        int[][] matriceDistances = new int[nbAdressesTotal][nbAdressesTotal];
 
         for(int i = 0; i < nbAdresses; i++){
             JsonObject row = rows.get(i).getAsJsonObject();
@@ -69,6 +70,14 @@ public class DistanceGoogleAPI {
                 JsonObject distance = element.getAsJsonObject("distance");
                 double distanceValue = distance.get("value").getAsDouble();
                 matriceDistances[i][j] = (int) Math.round(distanceValue/1000);
+            }
+            if(nbAdresses%2 != 0){
+                matriceDistances[i][nbAdresses] = 0;
+            }
+        }
+        if(nbAdresses%2 != 0){
+            for(int i = 0; i <= nbAdresses; i++){
+                matriceDistances[nbAdresses][i] = 0;
             }
         }
         return matriceDistances;

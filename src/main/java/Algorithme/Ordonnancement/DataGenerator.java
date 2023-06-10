@@ -1,4 +1,4 @@
-package Ordonnancement;
+package Algorithme.Ordonnancement;
 
 import API.DistanceGoogleAPI;
 
@@ -27,11 +27,12 @@ public class DataGenerator {
 
     public void generateIntputFile(){
         String filename = "src/main/java/Ordonnancement/Modeles/param_test.txt";
-        int nbRound = nbEquipe - 1;
+        int nbEquipeTotal = (nbEquipe%2 == 0) ? nbEquipe : nbEquipe+1;
+        int nbRound = nbEquipeTotal - 1;
         try{
             BufferedWriter writer = new BufferedWriter(new FileWriter(filename, true));
 
-            writer.write("n = " + nbEquipe);
+            writer.write("n = " + nbEquipeTotal);
             writer.append("\nr = ").append(String.valueOf(nbRound));
             writer.append("\nL_CONS = ").append(String.valueOf(borne_inf_cons));
             writer.append("\nU_CONS = ").append(String.valueOf(borne_sup_cons));
@@ -56,8 +57,9 @@ public class DataGenerator {
             DistanceGoogleAPI api = new DistanceGoogleAPI(this.adresses);
             int[][] matriceDistances = api.getDistances();
 
-            for(int i = 0; i < nbEquipe; i++){
-                for(int j = 0; j < nbEquipe; j++){
+            int nbEquipeTotal = (nbEquipe%2 == 0) ? nbEquipe : nbEquipe+1;
+            for(int i = 0; i < nbEquipeTotal; i++){
+                for(int j = 0; j < nbEquipeTotal; j++){
                     String distance = String.valueOf(matriceDistances[i][j]);
                     writer.append(distance).append(" ");
                 }

@@ -1,9 +1,9 @@
-package Algorithme;
+package Algorithme.Clustering;
 
 import java.util.ArrayList;
 
 public class ClusteringManagerMinMaxCluster extends ClusteringManager {
-    private int percentageWorsening = -1; //pourcentage de la distance totale que l'on se permet de détériorer. Si plus petit que 0 alors, pas de limite de détérioration
+    private int percentageWorsening = -1; //Pourcentage de la distance totale que l'on se permet de détériorer. Si plus petit que 0 alors, pas de limite de détérioration
 
     public ClusteringManagerMinMaxCluster(int percentageWorseningCopy)
     {

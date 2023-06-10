@@ -1,4 +1,4 @@
-package Ordonnancement;
+package Algorithme.Ordonnancement;
 
 import java.io.BufferedReader;
 import java.io.IOException;

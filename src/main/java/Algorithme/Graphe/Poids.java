@@ -1,4 +1,4 @@
-package Graphe;
+package Algorithme.Graphe;
 
 import java.io.Serializable;
 import java.util.ArrayList;

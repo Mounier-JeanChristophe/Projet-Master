@@ -1,9 +1,9 @@
 package Controllers;
 
 import API.CitiesDistanceAPI;
-import Algorithme.Clustering;
-import Algorithme.ClusteringManagerMinMaxCluster;
-import Algorithme.ClusteringManagerTotalDistances;
+import Algorithme.Clustering.Clustering;
+import Algorithme.Clustering.ClusteringManagerMinMaxCluster;
+import Algorithme.Clustering.ClusteringManagerTotalDistances;
 import DB.Ville.Ville;
 import DB.Ville.VilleDAO;
 import javafx.application.Platform;
@@ -71,7 +71,7 @@ public class ResultatsPoulesController implements Initializable {
     private Button launchButton;
 
     ArrayList<ArrayList<Integer>> pools=new ArrayList<>();
-    ArrayList<Algorithme.Equipe> equipeClusteringListe = new ArrayList<Algorithme.Equipe>();
+    ArrayList<Algorithme.Clustering.Equipe> equipeClusteringListe = new ArrayList<Algorithme.Clustering.Equipe>();
     ArrayList<Equipe> selectedEquipeListe=new ArrayList<>();
     ObservableList<Equipe> equipes;
     ParametersController popUp;
@@ -120,7 +120,7 @@ public class ResultatsPoulesController implements Initializable {
 //                    }
 //                    while (obj.hasNextLine()) {
 //                        String[] coordinates = obj.nextLine().split(" ");
-//                        Algorithme.Equipe equipe = new Algorithme.Equipe(Double.parseDouble(coordinates[0]), Double.parseDouble(coordinates[1])); //coordonnées x et y
+//                        Algorithme.Clustering.Equipe equipe = new Algorithme.Clustering.Equipe(Double.parseDouble(coordinates[0]), Double.parseDouble(coordinates[1])); //coordonnées x et y
 //                        equipeClusteringListe.add(equipe);
 //                    }
 //                    Clustering clustering = new Clustering(equipeClusteringListe, clusterSize, new ClusteringManagerTotalDistances(), "optimizedFurthestTeams"); //Initialisation du clustering
@@ -131,7 +131,7 @@ public class ResultatsPoulesController implements Initializable {
                     // comment when testing one file
                     ArrayList<ArrayList<Double>> distanceMatrix = new ArrayList<>(getDistanceMatrix(Context.getEquipeSelected()));
                     for (int i=0;i<Context.getEquipeSelected().size();i++){
-                        Algorithme.Equipe equipe = new Algorithme.Equipe(Context.getEquipeSelected().get(i).getVilleOfEquipe().getLatitudeDouble(), Context.getEquipeSelected().get(i).getVilleOfEquipe().getLongitudeDouble()); //coordonnées x et y
+                        Algorithme.Clustering.Equipe equipe = new Algorithme.Clustering.Equipe(Context.getEquipeSelected().get(i).getVilleOfEquipe().getLatitudeDouble(), Context.getEquipeSelected().get(i).getVilleOfEquipe().getLongitudeDouble()); //coordonnées x et y
                         equipeClusteringListe.add(equipe);
                     }
                     Clustering clustering = new Clustering(equipeClusteringListe, distanceMatrix, clusterSize, new ClusteringManagerTotalDistances(), "optimizedFurthestTeams"); //Initialisation du clustering
@@ -315,7 +315,7 @@ public class ResultatsPoulesController implements Initializable {
         service.restart();
     }
 
-    private ScatterChart<Number,Number> plotResult(ArrayList<Algorithme.Equipe> equipeListe, ArrayList<ArrayList<Integer>> pools) {
+    private ScatterChart<Number,Number> plotResult(ArrayList<Algorithme.Clustering.Equipe> equipeListe, ArrayList<ArrayList<Integer>> pools) {
         //Création du Chart
         Double minX=100.0;
         Double maxX=0.0;

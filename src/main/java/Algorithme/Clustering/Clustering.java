@@ -1,4 +1,4 @@
-package Algorithme;
+package Algorithme.Clustering;
 
 import java.util.ArrayList;
 import java.util.Random;
