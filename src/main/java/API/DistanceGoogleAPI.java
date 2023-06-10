@@ -36,24 +36,22 @@ public class DistanceGoogleAPI {
 
     public int[][] getDistances() throws IOException {
 
-        // creation d'un client okhttp et preparation de la requete
+        // creation d'un client okhttp et preparation de la requête
         OkHttpClient client = new OkHttpClient().newBuilder().build();
         Request request = new Request.Builder().url(this.url).build();
 
-        // envoie de la requete et recuperation de la reponse
+        // envoi de la requête et recuperation de la réponse
         Response response = client.newCall(request).execute();
         String responseData = Objects.requireNonNull(response.body()).string();
-
 
         return extractDistancesFromJsonResponse(responseData);
     }
 
     private int[][] extractDistancesFromJsonResponse(String responseData){
 
-        System.out.println(responseData);
-        // recuperation du corps de la requete dans un objet json
+        //System.out.println(responseData);
+        // recuperation du corps de la requête dans un objet json
         JsonObject jsonObject = new Gson().fromJson(responseData, JsonObject.class);
-
         JsonArray rows = jsonObject.getAsJsonArray("rows");
 
         // initialisation matrice distance

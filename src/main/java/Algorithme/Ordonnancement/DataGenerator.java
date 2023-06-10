@@ -26,11 +26,11 @@ public class DataGenerator {
     }
 
     public void generateIntputFile(){
-        String filename = "src/main/java/Ordonnancement/Modeles/param_test.txt";
+        String filename = "src/main/java/Algorithme/Ordonnancement/Modeles/param.txt";
         int nbEquipeTotal = (nbEquipe%2 == 0) ? nbEquipe : nbEquipe+1;
         int nbRound = nbEquipeTotal - 1;
         try{
-            BufferedWriter writer = new BufferedWriter(new FileWriter(filename, true));
+            BufferedWriter writer = new BufferedWriter(new FileWriter(filename, false));
 
             writer.write("n = " + nbEquipeTotal);
             writer.append("\nr = ").append(String.valueOf(nbRound));
@@ -49,7 +49,7 @@ public class DataGenerator {
 
     private void calculateDistances() {
 
-        String filename = "src/main/java/Ordonnancement/Modeles/param_test.txt";
+        String filename = "src/main/java/Algorithme/Ordonnancement/Modeles/param.txt";
         try {
             BufferedWriter writer = new BufferedWriter(new FileWriter(filename, true));
             writer.write("d = [ \n");
@@ -65,7 +65,7 @@ public class DataGenerator {
                 }
                 writer.append("\n");
             }
-            writer.append("\n]");
+            writer.append("]");
             writer.close();
         } catch (IOException e) {
             e.printStackTrace();

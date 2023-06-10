@@ -1,6 +1,5 @@
 using JuMP, CPLEX
 
-include("distance.txt")
 include("param.txt")
 
 m = Model(CPLEX.Optimizer)

@@ -1,7 +1,6 @@
 using JuMP, CPLEX
 
-#include("distance.txt")
-include("param_test.txt")
+include("param.txt")
 
 m = Model(CPLEX.Optimizer)
 set_attribute(m, "CPX_PARAM_EPINT", 1e-8) # https://www.ibm.com/docs/en/icos/22.1.1?topic=parameters-integrality-tolerance

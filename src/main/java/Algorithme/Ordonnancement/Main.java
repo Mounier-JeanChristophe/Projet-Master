@@ -10,92 +10,22 @@ public class Main {
 
     public static void main(String[] args){
         ArrayList<String> adresses = new ArrayList<>();
-        adresses.add("Paris");
-        adresses.add("Madrid");
-        adresses.add("Londres");
-        adresses.add("Berlin");
-        adresses.add("Rome");
-        adresses.add("Marseille");
-        adresses.add("Berne");
-        adresses.add("Turin");
-        adresses.add("Nantes");
-        adresses.add("Bruxelles");
+        adresses.add("Stade municipal, Sablet");
+        adresses.add("Chem. de Saint-Hilaire, 84170 Monteux");
+        adresses.add("AVENUE DU STADE,  84870 LORIOL DU COMTAT");
+        adresses.add("Av. Pierre de Coubertin, 84150 Jonquières");
+        adresses.add("Chemin de la Passerelle, 84100 Orange");
+        adresses.add("Stade Municipal, 26170 Mollans-sur-Ouvèze");
+        adresses.add("151 Chem. de Meneque, 84410 Bédoin");
+        adresses.add("Chem. de Saint-Roch, 84210 Saint-Didier");
+        adresses.add("33 Imp. du Stade, 84830 Sérignan-du-Comtat");
+        //adresses.add("Avenue du Marechal Leclerc, 84500 BOLLENE");
 
-        DataGenerator dataGenerator = new DataGenerator(10,4,5,0,9, adresses);
+        DataGenerator dataGenerator = new DataGenerator(adresses.size(),4,5,0,9, adresses);
         dataGenerator.generateIntputFile();
-        //getSchedulingResult();
-
-    }
-
-    public static SchedulingResult getSchedulingResult(){
-        try{
-            // String command = "julia "+args; version finale
-            // algo: modele_abs.jl modele_carre.jl modele_minz.jl
-            String model = "src/main/java/Ordonnancement/Modeles/modele_minz.jl";
-            String command = "julia " + model;
-
-            // lancement du modele Julia
-            ProcessBuilder processBuilder = new ProcessBuilder("cmd.exe", "/c", command);
-            processBuilder.redirectErrorStream(true);
-            Process process = processBuilder.start();
-
-            // Read the output of the process
-            BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
-            String line;
-            Pattern p1, p2, p3;
-            Matcher m1, m2, m3;
-            p1 = Pattern.compile("^dtm");
-            p2 = Pattern.compile("^dt");
-            p3 = Pattern.compile("^x");
-
-            SchedulingResult res = new SchedulingResult();
-            while ((line = reader.readLine()) != null) {
-                m1 = p1.matcher(line);
-                m2 = p2.matcher(line);
-                m3 = p3.matcher(line);
-                System.out.println(line);
-
-                // cas "dtm"
-                if(m1.find()){
-                    String[] token = line.split(" ");
-                    double dtm = Double.parseDouble(token[1]);
-                    //System.out.println(dtm);
-                    res.setDtm(dtm);
-                }
-                //cas "dt[i]"
-                else if(m2.find()){
-                    String newLine;
-                    newLine = line.replace("[", " ");
-                    newLine = newLine.replace("]", " ");
-                    String[] token = newLine.split(" ");
-                    int id = Integer.parseInt(token[1]);
-
-                    double doubleValue = Double.parseDouble(token[4]);
-                    int distance = (int) Math.round(doubleValue);
-
-                    //System.out.println(id+" "+distance);
-                    res.addDistance(id, distance);
-
-                }
-                // cas "x[i,j,k]"
-                else if(m3.find()){
-                    String newLine;
-                    newLine = line.replace("[", " ");
-                    newLine = newLine.replace("]", " ");
-                    newLine = newLine.replace(",", " ");
-                    String[] token = newLine.split(" ");
-                    int i,j,k;
-                    i = Integer.parseInt(token[1]);
-                    j = Integer.parseInt(token[2]);
-                    k = Integer.parseInt(token[3]);
-                    //System.out.println(i+" "+j+" "+k);
-                    res.addMatch(i, j, k);
-                }
-            }
-            return  res;
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return null;
+        System.out.println("generate input file ok");
+        Scheduling scheduling = new Scheduling(Scheduling.modele.MINZ);
+        scheduling.getSchedulingResult();
+        System.out.println(scheduling);
     }
 }
