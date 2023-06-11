@@ -43,11 +43,15 @@ public class OrdonancementController {
         int param_l = (int) l.getValue();
         int param_ucons = (int) ucons.getValue();
         int param_lcons = (int) lcons.getValue();
-
+        /*
+        
+        */
+        
         ArrayList<String> adresseList = new ArrayList<>(equipes.values());
         DataGenerator dataGenerator = new DataGenerator(param_nbEquipe, param_l, param_u, param_lcons, param_ucons,adresseList);
         dataGenerator.generateIntputFile();
         Scheduling scheduling = new Scheduling(Scheduling.modele.MINZ);
+        scheduling.getSchedulingResult(); 
         System.out.println(scheduling);
     }
 
