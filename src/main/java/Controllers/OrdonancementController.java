@@ -13,6 +13,7 @@ import java.util.Map;
 public class OrdonancementController {
 
     private Map<String,String> equipes;
+    private Map<Integer, String> indexEquipes;
 
     @FXML
     Slider u, l, ucons, lcons;
@@ -33,6 +34,7 @@ public class OrdonancementController {
         ucons = new Slider();
         lcons = new Slider();
         equipes = new HashMap<>();
+        indexEquipes = new HashMap<>();
     }
 
 
@@ -44,10 +46,17 @@ public class OrdonancementController {
         int param_ucons = (int) ucons.getValue();
         int param_lcons = (int) lcons.getValue();
 
+        int i = 1;
+        for(String nom : equipes.keySet()){
+            indexEquipes.put(i, nom);
+            i++;
+        }
+
         ArrayList<String> adresseList = new ArrayList<>(equipes.values());
         DataGenerator dataGenerator = new DataGenerator(param_nbEquipe, param_l, param_u, param_lcons, param_ucons,adresseList);
         dataGenerator.generateIntputFile();
         Scheduling scheduling = new Scheduling(Scheduling.modele.MINZ);
+        scheduling.getSchedulingResult();
         System.out.println(scheduling);
     }
 
@@ -72,5 +81,9 @@ public class OrdonancementController {
     public void onAddAdresseClick(){
         equipes.put(nomEquipe.getText(),adresseEquipe.getText());
     }
-    
+
+    public Map<Integer, String> getIndexEquipes(){
+        return this.indexEquipes;
+    }
+
 }
