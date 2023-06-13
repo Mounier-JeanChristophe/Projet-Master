@@ -37,4 +37,9 @@ public class AccueilController {
     void onInterfaceIAClickButton(ActionEvent event) throws IOException {
         Context.getApp().showFxml("interfaceIA.fxml");
     }
+
+    @FXML
+    void onOrdonancementClickButton(ActionEvent event) throws IOException {
+        Context.getApp().showFxml("ordonancement.fxml");
+    }
 }
