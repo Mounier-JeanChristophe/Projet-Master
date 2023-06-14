@@ -19,7 +19,7 @@ public class Main {
         adresses.add("151 Chem. de Meneque, 84410 Bédoin");
         adresses.add("Chem. de Saint-Roch, 84210 Saint-Didier");
         adresses.add("33 Imp. du Stade, 84830 Sérignan-du-Comtat");
-        //adresses.add("Avenue du Marechal Leclerc, 84500 BOLLENE");
+        adresses.add("Avenue du Marechal Leclerc, 84500 BOLLENE");
 
         DataGenerator dataGenerator = new DataGenerator(adresses.size(),4,5,0,9, adresses);
         dataGenerator.generateIntputFile();

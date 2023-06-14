@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="747.0" prefWidth="517.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.PredictionController">
+    <Label fx:id="resultLabel" prefHeight="18.0" prefWidth="0.0" />
+
+    <TextField fx:id="seasonField" promptText="Season" />
+    <TextField fx:id="homeTeamField" promptText="Home Team" />
+    <TextField fx:id="awayTeamField" promptText="Away Team" />
+    <TextField fx:id="weekField" promptText="Week" />
+    <TextField fx:id="htgsField" promptText="HTGS" />
+    <TextField fx:id="atgsField" promptText="ATGS" />
+    <TextField fx:id="htgcField" promptText="HTGC" />
+    <TextField fx:id="atgcField" promptText="ATGC" />
+    <TextField fx:id="htpField" promptText="HTP" />
+    <TextField fx:id="atpField" promptText="ATP" />
+    <TextField fx:id="am1Field" promptText="AM1" />
+    <TextField fx:id="am2Field" promptText="AM2" />
+    <TextField fx:id="hm1Field" promptText="HM1" />
+    <TextField fx:id="hm2Field" promptText="HM2" />
+    <TextField fx:id="hm3Field" promptText="HM3" />
+    <TextField fx:id="am3Field" promptText="AM3" />
+    <TextField fx:id="am4Field" promptText="AM4" />
+    <TextField fx:id="hm4Field" promptText="HM4" />
+    <TextField fx:id="hm5Field" promptText="HM5" />
+    <TextField fx:id="am5Field" promptText="AM5" />
+    <TextField fx:id="htWinStreak3Field" promptText="HT Win Streak 3" />
+    <TextField fx:id="htWinStreak5Field" promptText="HT Win Streak 5" />
+    <TextField fx:id="htLossStreak3Field" promptText="HT Loss Streak 3" />
+    <TextField fx:id="htLossStreak5Field" promptText="HT Loss Streak 5" />
+    <TextField fx:id="atWinStreak3Field" promptText="AT Win Streak 3" />
+    <TextField fx:id="atWinStreak5Field" promptText="AT Win Streak 5" />
+    <TextField fx:id="atLossStreak3Field" promptText="AT Loss Streak 3" />
+    <TextField fx:id="atLossStreak5Field" promptText="AT Loss Streak 5" />
+    <TextField fx:id="yearField" promptText="Year" />
+    <TextField fx:id="monthField" promptText="Month" />
+
+    <Button fx:id="predictButton" onAction="#predict" text="Prédire" />
+</VBox>
