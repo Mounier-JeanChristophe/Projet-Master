@@ -18,7 +18,7 @@ public class Main {
     public static BiMap<Integer, String> alphabet;
     public static GraphePoids graphePoids;
     public static Graph graph;
-    public static String projectName;
+    public static String projectNameGlobal;
 
     public static void main(String[] args) throws IOException, ClassNotFoundException, GraphParseException {
         System.setProperty("org.graphstream.ui", "swing");
@@ -37,6 +37,7 @@ public class Main {
      * sinon cree un projet a partir d'un ficher d'entree
      */
     public static void init(String projectName) throws IOException, ClassNotFoundException, GraphParseException {
+        projectNameGlobal = projectName;
         initAlphabet();
         //initAlphabetLigue1();
         graph = new MultiGraph("graph");
@@ -58,16 +59,12 @@ public class Main {
         }
         //sinon on demande un fichier d'entree
         else{
-            //String input;
+            String input = projectName + ".txt";
             System.out.println("Projet inexistant !");
-            /*do {
-                System.out.print("Entrez le nom d'un fichier valide: ");
-                input = reader.readLine();
-            }while(!FileManager.isDataFileExist(input));
 
             graphePoids = new GraphePoids(input, 5);
             graphePoids.loadFile(input);
-            makeGraph();*/
+            makeGraph();
         }
         graph.display();
         updateWeight();
@@ -293,13 +290,13 @@ public class Main {
 
             //sauvegarder le projet
             case("4"):
-                FileManager.saveData(graphePoids,graph, projectName);
+                FileManager.saveData(graphePoids,graph, projectNameGlobal);
                 System.out.println("Sauvegarde réussie");
                 return false;
 
             //supprimer le projet
             case("5"):
-                FileManager.deleteProject(projectName);
+                FileManager.deleteProject(projectNameGlobal);
                 return false;
 
             //prediction
@@ -360,19 +357,21 @@ public class Main {
         return false;
     }
 
+
+    //utilisation que pour debug
     public boolean afficherModele() {
         graphePoids.print();
         return false;
     }
 
     public boolean sauvegarderProjet() {
-        FileManager.saveData(graphePoids, graph, projectName);
+        FileManager.saveData(graphePoids, graph, projectNameGlobal);
         System.out.println("Sauvegarde réussie");
         return false;
     }
 
     public boolean supprimerProjet() {
-        FileManager.deleteProject(projectName);
+        FileManager.deleteProject(projectNameGlobal);
         return false;
     }
 

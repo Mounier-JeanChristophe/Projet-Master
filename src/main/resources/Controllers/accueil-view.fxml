@@ -19,17 +19,17 @@
             <Font name="Bodoni 72 Book" size="28.0" />
          </font>
       </Text>
-      <Button fx:id="gererEquipes" layoutX="103.0" layoutY="563.0" mnemonicParsing="false" onAction="#onGererEquipesButtonClick" prefHeight="87.0" prefWidth="297.0" style="-fx-background-radius: 0.5em;" text="Gérer les équipes" textAlignment="CENTER">
+      <Button fx:id="gererEquipes" layoutX="44.0" layoutY="563.0" mnemonicParsing="false" onAction="#onGererEquipesButtonClick" prefHeight="69.0" prefWidth="260.0" style="-fx-background-radius: 0.5em;" text="Gérer les équipes" textAlignment="CENTER">
          <font>
             <Font size="22.0" />
          </font>
       </Button>
-      <Button fx:id="calculerPoules" layoutX="452.0" layoutY="563.0" mnemonicParsing="false" onAction="#onCalculerPoulesClickButton" prefHeight="87.0" prefWidth="297.0" style="-fx-background-radius: 0.5em;" text="Calculer les poules" textAlignment="CENTER">
+      <Button fx:id="calculerPoules" layoutX="341.0" layoutY="563.0" mnemonicParsing="false" onAction="#onCalculerPoulesClickButton" prefHeight="69.0" prefWidth="252.0" style="-fx-background-radius: 0.5em;" text="Calculer les poules" textAlignment="CENTER">
          <font>
             <Font size="22.0" />
          </font>
       </Button>
-      <Button fx:id="interfaceIA" layoutX="797.0" layoutY="563.0" mnemonicParsing="false" onAction="#onInterfaceIAClickButton" prefHeight="87.0" prefWidth="297.0" style="-fx-background-radius: 0.5em;" text="Prédiction" textAlignment="CENTER">
+      <Button fx:id="interfaceIA" layoutX="629.0" layoutY="563.0" mnemonicParsing="false" onAction="#onInterfaceIAClickButton" prefHeight="69.0" prefWidth="241.0" style="-fx-background-radius: 0.5em;" text="Prédiction" textAlignment="CENTER">
          <font>
             <Font size="22.0" />
          </font>
@@ -39,5 +39,10 @@
             <Image url="@images/img.JPG" />
          </image>
       </ImageView>
+      <Button fx:id="Ordonancement" layoutX="909.0" layoutY="563.0" mnemonicParsing="false" onAction="#onOrdonancementClickButton" prefHeight="69.0" prefWidth="241.0" style="-fx-background-radius: 0.5em;" text="Ordonancement" textAlignment="CENTER">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Button>
    </children>
 </Pane>
