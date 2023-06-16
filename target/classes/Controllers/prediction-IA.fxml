@@ -10,7 +10,7 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.PredictionController">
 
-<VBox layoutY="258.0" prefHeight="521.0" prefWidth="348.0">
+<VBox layoutX="28.0" layoutY="136.0" prefHeight="614.0" prefWidth="348.0">
     <Label fx:id="resultLabel" prefHeight="18.0" prefWidth="0.0" />
     <TextField fx:id="seasonField" promptText="Season" />
     <TextField fx:id="homeTeamField" promptText="Home Team" />
@@ -27,13 +27,13 @@
     <TextField fx:id="hm1Field" promptText="HM1" />
     <TextField fx:id="hm2Field" promptText="HM2" />
     <TextField fx:id="hm3Field" promptText="HM3" />
+</VBox>
+    <VBox layoutX="420.0" layoutY="149.0" prefHeight="614.0" prefWidth="348.0">
     <TextField fx:id="am3Field" promptText="AM3" />
     <TextField fx:id="am4Field" promptText="AM4" />
     <TextField fx:id="hm4Field" promptText="HM4" />
     <TextField fx:id="hm5Field" promptText="HM5" />
     <TextField fx:id="am5Field" promptText="AM5" />
-    </VBox>
-    <VBox layoutX="375.0" layoutY="275.0" prefHeight="515.0" prefWidth="348.0">
     <TextField fx:id="htWinStreak3Field" promptText="HT Win Streak 3" />
     <TextField fx:id="htWinStreak5Field" promptText="HT Win Streak 5" />
     <TextField fx:id="htLossStreak3Field" promptText="HT Loss Streak 3" />
@@ -46,12 +46,12 @@
     <TextField fx:id="monthField" promptText="Month" />
        <Button fx:id="predictButton" onAction="#predict" text="Prédire" />
     </VBox>
-    <Button fx:id="retour" layoutX="1034.0" layoutY="735.0" mnemonicParsing="false" onAction="#onRetourButtonClick" style="-fx-background-radius: 0.5em;" text="Retour" textFill="WHITE">
+    <Button fx:id="retour" layoutX="1032.0" layoutY="707.0" mnemonicParsing="false" onAction="#onRetourButtonClick" style="-fx-background-radius: 0.5em;" text="Retour" textFill="WHITE">
         <font>
             <Font name="Monaco" size="26.0" />
         </font>
     </Button>
-   <Text layoutX="147.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prédiction IA" textAlignment="CENTER" wrappingWidth="926.9160461425781">
+   <Text layoutX="137.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prédiction IA" textAlignment="CENTER" wrappingWidth="926.9160461425781">
       <font>
          <Font name="System Bold" size="83.0" />
       </font>

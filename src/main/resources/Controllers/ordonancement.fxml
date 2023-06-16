@@ -11,26 +11,35 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.OrdonancementController">
     <children>
-        <Text layoutX="141.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Calculer Graphe" textAlignment="CENTER" wrappingWidth="926.9160461425781">
+        <Text layoutX="141.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ordonnancement" textAlignment="CENTER" wrappingWidth="926.9160461425781">
             <font>
                 <Font name="System Bold" size="83.0" />
             </font>
         </Text>
-      <Slider fx:id="u" layoutX="428.0" layoutY="319.0" />
-      <Slider fx:id="l" layoutX="428.0" layoutY="361.0" />
-        <Slider fx:id="ucons" layoutX="638.0" layoutY="319.0" />
-        <Slider fx:id="lcons" layoutX="638.0" layoutY="354.0" />
-      <TextField layoutX="526.0" layoutY="250.0" promptText="nbEquipe" />
-      <TextField layoutX="435.0" layoutY="441.0" promptText="nom équipe" />
-      <TextField layoutX="623.0" layoutY="441.0" promptText="adresse" />
-      <Button layoutX="802.0" layoutY="441.0" mnemonicParsing="false" text="Valider" />
-      <Button layoutX="547.0" layoutY="526.0" mnemonicParsing="false" text="Lancer le modèle" />
+      <Slider fx:id="u" layoutX="421.0" layoutY="397.0" prefHeight="14.0" prefWidth="174.0" />
+      <Slider fx:id="l" layoutX="421.0" layoutY="492.0" prefHeight="33.0" prefWidth="174.0" />
+        <Slider fx:id="ucons" layoutX="620.0" layoutY="397.0" prefHeight="14.0" prefWidth="158.0" />
+        <Slider fx:id="lcons" layoutX="620.0" layoutY="502.0" prefHeight="14.0" prefWidth="158.0" />
+      <TextField layoutX="505.0" layoutY="242.0" prefHeight="45.0" prefWidth="203.0" promptText="nbEquipe" />
+      <TextField layoutX="421.0" layoutY="559.0" prefHeight="45.0" prefWidth="174.0" promptText="nom équipe" />
+      <TextField layoutX="611.0" layoutY="559.0" prefHeight="45.0" prefWidth="158.0" promptText="adresse" />
+      <Button layoutX="800.0" layoutY="559.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="75.0" text="Valider" />
+      <Button layoutX="538.0" layoutY="699.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="129.0" text="Lancer le modèle" />
       <Accordion layoutX="822.0" layoutY="203.0" />
-      <ChoiceBox layoutX="898.0" layoutY="250.0" prefWidth="150.0" />
+      <ChoiceBox layoutX="893.0" layoutY="234.0" prefHeight="33.0" prefWidth="158.0" />
     <Button fx:id="retour" layoutX="1034.0" layoutY="735.0" mnemonicParsing="false" onAction="#onRetourButtonClick" style="-fx-background-radius: 0.5em;" text="Retour" textFill="WHITE">
         <font>
             <Font name="Monaco" size="26.0" />
         </font>
     </Button>
+      <Text layoutX="505.0" layoutY="345.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre de matchs extérieur" textAlignment="CENTER" wrappingWidth="203.0">
+         <font>
+            <Font size="14.0" />
+         </font></Text>
+      <Text layoutX="456.0" layoutY="466.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre de matchs consécutif extérieur" textAlignment="CENTER" wrappingWidth="301.0">
+         <font>
+            <Font size="14.0" />
+         </font></Text>
+      <Text layoutX="757.0" layoutY="255.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sélection du modèle :" />
     </children>
 </Pane>
