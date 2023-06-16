@@ -10,6 +10,8 @@
 
 <?import javafx.scene.effect.ColorInput?>
 <?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.Group?>
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AccueilController">
    <children>
       <Text layoutX="213.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Optimisation de Competitions Sportives" textAlignment="CENTER" wrappingWidth="774.9160461425781">
@@ -27,6 +29,9 @@
             <Font size="22.0" />
          </font>
       </Button>
+      <ImageView fitHeight="261.0" fitWidth="347.0" layoutX="420.0" layoutY="228.0" pickOnBounds="true" preserveRatio="true">
+         <SVGPath content="@images/gears-solid.svg" />
+      </ImageView>
       <Button fx:id="calculerPoules" layoutX="341.0" layoutY="563.0" mnemonicParsing="false" onAction="#onCalculerPoulesClickButton" prefHeight="69.0" prefWidth="252.0" style="-fx-background-radius: 0.5em;" text="Calculer les poules" textAlignment="CENTER">
          <font>
             <Font size="22.0" />
