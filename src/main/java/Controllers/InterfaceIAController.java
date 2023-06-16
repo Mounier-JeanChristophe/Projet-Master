@@ -32,4 +32,9 @@ public class InterfaceIAController {
     void onGraphButtonClick(ActionEvent event) throws IOException {
         Context.getApp().showFxml("calcul-graphe.fxml");
     }
+
+    @FXML
+    void onIAButtonClick(ActionEvent event) throws IOException {
+        Context.getApp().showFxml("prediction-IA.fxml");
+    }
 }

@@ -27,7 +27,7 @@
             <Font name="Bodoni 72 Book" size="28.0" />
          </font>
       </Text>
-      <Button fx:id="retour11" layoutX="669.0" layoutY="428.0" mnemonicParsing="false" onAction="#onRetourButtonClick" style="-fx-background-radius: 0.5em;" text="Logique IA" textFill="WHITE">
+      <Button fx:id="retour11" layoutX="669.0" layoutY="428.0" mnemonicParsing="false" onAction="#onIAButtonClick" style="-fx-background-radius: 0.5em;" text="Logique IA" textFill="WHITE">
          <font>
             <Font name="Monaco" size="26.0" />
          </font>
