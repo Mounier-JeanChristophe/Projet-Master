@@ -2,10 +2,12 @@ package Controllers;
 
 import Algorithme.Ordonnancement.DataGenerator;
 import Algorithme.Ordonnancement.Scheduling;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Slider;
 import javafx.scene.control.TextField;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -37,7 +39,10 @@ public class OrdonancementController {
         indexEquipes = new HashMap<>();
     }
 
-
+    @FXML
+    void onRetourButtonClick(ActionEvent event) throws IOException {
+        Context.getApp().back();
+    }
     @FXML //fonction recuperant les param donnes
     public void onButtonCLicked(){
         int param_nbEquipe = Integer.parseInt(nbEquipe.getText());
