@@ -1,0 +1,68 @@
+/* Bouton */
+.button {
+    -fx-background-color: #F0F0F0;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.2), 5, 0, 0, 1);
+    -fx-text-fill: #333333;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-padding: 10px 20px;
+    -fx-cursor: hand;
+    -fx-border-width: 2px;
+    -fx-border-color: #CCCCCC;
+    -fx-transition: background-color 0.3s ease-in-out;
+}
+
+.button:hover {
+    -fx-background-color: #E0E0E0;
+}
+
+.button:pressed {
+    -fx-background-color: #D0D0D0;
+}
+
+/* Racine de l'application */
+.root {
+    -fx-font-family: "Arial", sans-serif;
+    -fx-background-color: #F8F8F8;
+}
+
+/* Pane */
+.pane {
+    -fx-background-color: #FFFFFF;
+    -fx-border-width: 1px;
+    -fx-border-color: #DDDDDD;
+    -fx-padding: 20px;
+}
+
+/* VBox */
+.vbox {
+    -fx-spacing: 10px;
+    -fx-padding: 20px;
+}
+
+/* HBox */
+.hbox {
+    -fx-spacing: 10px;
+    -fx-padding: 20px;
+}
+
+/* Label */
+.label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333;
+    -fx-font-weight: normal;
+}
+
+/* TextField */
+.text-field {
+    -fx-background-color: #FFFFFF;
+    -fx-border-width: 1px;
+    -fx-border-color: #CCCCCC;
+    -fx-padding: 10px;
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333;
+}
+
+.text-field:focused {
+    -fx-border-color: #4CAF50;
+}
