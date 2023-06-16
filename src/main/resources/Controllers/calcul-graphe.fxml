@@ -39,5 +39,10 @@
                 <Font size="18.0" />
             </font>
         </Text>
+        <Button fx:id="retour" layoutX="1034.0" layoutY="735.0" mnemonicParsing="false" onAction="#onRetourButtonClick" style="-fx-background-radius: 0.5em;" text="Retour" textFill="WHITE">
+            <font>
+                <Font name="Monaco" size="26.0" />
+            </font>
+        </Button>
     </children>
 </Pane>

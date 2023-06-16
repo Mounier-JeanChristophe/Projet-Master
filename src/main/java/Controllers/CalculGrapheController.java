@@ -69,4 +69,9 @@ public class CalculGrapheController {
     void onSupprimerProjetButtonClick(ActionEvent event) {
         mainInstance.supprimerProjet();
     }
+
+    @FXML
+    void onRetourButtonClick(ActionEvent event) throws IOException {
+        Context.getApp().back();
+    }
 }

@@ -27,5 +27,10 @@
       <Accordion layoutX="822.0" layoutY="203.0" />
       <ChoiceBox layoutX="898.0" layoutY="250.0" prefWidth="150.0" />
       <RangeSlider layoutX="295.0" layoutY="368.0" />
+    <Button fx:id="retour" layoutX="1034.0" layoutY="735.0" mnemonicParsing="false" onAction="#onRetourButtonClick" style="-fx-background-radius: 0.5em;" text="Retour" textFill="WHITE">
+        <font>
+            <Font name="Monaco" size="26.0" />
+        </font>
+    </Button>
     </children>
 </Pane>
