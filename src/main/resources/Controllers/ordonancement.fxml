@@ -8,7 +8,6 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
-<?import org.controlsfx.control.RangeSlider?>
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.OrdonancementController">
     <children>
@@ -17,16 +16,17 @@
                 <Font name="System Bold" size="83.0" />
             </font>
         </Text>
-      <Slider layoutX="534.0" layoutY="312.0" />
-      <Slider layoutX="534.0" layoutY="361.0" />
+      <Slider fx:id="u" layoutX="428.0" layoutY="319.0" />
+      <Slider fx:id="l" layoutX="428.0" layoutY="361.0" />
+        <Slider fx:id="ucons" layoutX="638.0" layoutY="319.0" />
+        <Slider fx:id="lcons" layoutX="638.0" layoutY="354.0" />
       <TextField layoutX="526.0" layoutY="250.0" promptText="nbEquipe" />
       <TextField layoutX="435.0" layoutY="441.0" promptText="nom équipe" />
       <TextField layoutX="623.0" layoutY="441.0" promptText="adresse" />
       <Button layoutX="802.0" layoutY="441.0" mnemonicParsing="false" text="Valider" />
-      <Button layoutX="551.0" layoutY="529.0" mnemonicParsing="false" text="Lancer le modèle" />
+      <Button layoutX="547.0" layoutY="526.0" mnemonicParsing="false" text="Lancer le modèle" />
       <Accordion layoutX="822.0" layoutY="203.0" />
       <ChoiceBox layoutX="898.0" layoutY="250.0" prefWidth="150.0" />
-      <RangeSlider layoutX="295.0" layoutY="368.0" />
     <Button fx:id="retour" layoutX="1034.0" layoutY="735.0" mnemonicParsing="false" onAction="#onRetourButtonClick" style="-fx-background-radius: 0.5em;" text="Retour" textFill="WHITE">
         <font>
             <Font name="Monaco" size="26.0" />
