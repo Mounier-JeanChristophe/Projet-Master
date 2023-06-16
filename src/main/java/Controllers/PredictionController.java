@@ -9,6 +9,8 @@ import org.tensorflow.SavedModelBundle;
 import org.tensorflow.Session;
 import org.tensorflow.Tensor;
 
+import java.io.IOException;
+
 public class PredictionController {
     @FXML
     private TextField am1Field;
@@ -203,5 +205,10 @@ public class PredictionController {
             }
         }
 
+    }
+
+    @FXML
+    void onRetourButtonClick(ActionEvent event) throws IOException {
+        Context.getApp().back();
     }
 }

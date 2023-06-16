@@ -5,10 +5,12 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.PredictionController">
 
-<VBox prefHeight="779.0" prefWidth="348.0">
+<VBox layoutY="258.0" prefHeight="521.0" prefWidth="348.0">
     <Label fx:id="resultLabel" prefHeight="18.0" prefWidth="0.0" />
     <TextField fx:id="seasonField" promptText="Season" />
     <TextField fx:id="homeTeamField" promptText="Home Team" />
@@ -31,7 +33,7 @@
     <TextField fx:id="hm5Field" promptText="HM5" />
     <TextField fx:id="am5Field" promptText="AM5" />
     </VBox>
-    <VBox layoutX="375.0" layoutY="11.0" prefHeight="779.0" prefWidth="348.0">
+    <VBox layoutX="375.0" layoutY="275.0" prefHeight="515.0" prefWidth="348.0">
     <TextField fx:id="htWinStreak3Field" promptText="HT Win Streak 3" />
     <TextField fx:id="htWinStreak5Field" promptText="HT Win Streak 5" />
     <TextField fx:id="htLossStreak3Field" promptText="HT Loss Streak 3" />
@@ -42,6 +44,16 @@
     <TextField fx:id="atLossStreak5Field" promptText="AT Loss Streak 5" />
     <TextField fx:id="yearField" promptText="Year" />
     <TextField fx:id="monthField" promptText="Month" />
+       <Button fx:id="predictButton" onAction="#predict" text="Prédire" />
     </VBox>
-    <Button fx:id="predictButton" layoutX="333.0" layoutY="658.0" onAction="#predict" text="Prédire" />
+    <Button fx:id="retour" layoutX="1034.0" layoutY="735.0" mnemonicParsing="false" onAction="#onRetourButtonClick" style="-fx-background-radius: 0.5em;" text="Retour" textFill="WHITE">
+        <font>
+            <Font name="Monaco" size="26.0" />
+        </font>
+    </Button>
+   <Text layoutX="147.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prédiction IA" textAlignment="CENTER" wrappingWidth="926.9160461425781">
+      <font>
+         <Font name="System Bold" size="83.0" />
+      </font>
+   </Text>
 </Pane>
